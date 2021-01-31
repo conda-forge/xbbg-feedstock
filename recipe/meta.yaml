@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "0.7.4" %}
+{% set version = "0.7.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d00c451e1e66a50d3c570e7cd72da04feda17ab25cd06116b75c080a1a449df4
+  sha256: baebc86d91eaf924727b0961edda9e0dfc3ea891a6e6e90de45d22b2e5416b6b
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -42,10 +42,10 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Intuitive Bloomberg data API'
+  summary: Intuitive Bloomberg data API
   doc_url: https://xbbg.readthedocs.io
   dev_url: https://github.com/alpha-xone/xbbg
 
 extra:
   recipe-maintainers:
-   - mbonix
+    - mbonix
