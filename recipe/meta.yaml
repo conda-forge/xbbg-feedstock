@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: cb318cadb109afe9d797930ceeac5de1a3639111d79e57369e62d44b98ee553a
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: be4be54943751b868930024c1a04428e9c2dbbd4fb6c036cc8517cba5a55a2eb
 
 build:
   noarch: python
