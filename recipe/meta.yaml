@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,11 +20,12 @@ requirements:
     - python {{ python_min }}
     - pip
     - pypandoc
+    - setuptools
   run:
     - python >={{ python_min }}
     - blpapi
     - numpy >=1.15.0
-    - pandas >=1.0.0, <=1.5.3
+    - pandas >=1.0.0,<=1.5.3
     - pyarrow >=1.0.1
     - pytz >=2020.4
     - ruamel.yaml >=0.15.0
