@@ -30,7 +30,7 @@ requirements:
     - blpapi
     - numpy >=2.2.6
     - pandas >=2.0,<=2.3.0
-    - pandas-market-calendars >=5.1.3
+    - pandas_market_calendars >=5.1.3
     - pyarrow >=22.0.0
     - python-stdnum >=2.1
     - pytz >=2025.2
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/alpha-xone/xbbg
@@ -57,3 +58,4 @@ about:
 extra:
   recipe-maintainers:
     - marcobonifacio
+    - kj55-dev
