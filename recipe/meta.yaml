@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 856fb05f80ada823fd9b9e094a6a6d73e32817458b45c81d278a1faba3f63be0
+  sha256: 96a4641d854fe8101d6cd2973f085dadce38dd6dd96e6ee42ff2148024b3e76e
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [unix]
     - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [win]
