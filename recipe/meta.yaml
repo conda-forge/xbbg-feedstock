@@ -38,12 +38,10 @@ requirements:
 test:
   imports:
     - xbbg
-  commands:
-    - pip check
+  # pip check disabled: upstream pyproject.toml lists python-stdnum>=2.1
+  # which is unavailable on conda-forge. Will be fixed in xbbg v0.11+
   requires:
-    - pip
     - python {{ python_min }}
-    - pytest >=8.4.2
 
 about:
   home: https://github.com/alpha-xone/xbbg
