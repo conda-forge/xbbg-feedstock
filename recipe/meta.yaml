@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "0.10.3" %}
+{% set version = "0.11.0b5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 900a0faf6aa0e4f470767798b7ef2ba6763bfb29a4d1d6c20b5d4dbb0e24c036
+  sha256: 3ce88544588649590e53a8e4766ca566b6950729fba9c724e87a318d1f2140ff
 
 build:
   noarch: python
@@ -28,18 +28,14 @@ requirements:
   run:
     - python >={{ python_min }}
     - blpapi
+    - narwhals >=2.14.0
     - numpy >=2.2.6
     - pandas >=2.0
-    - pandas_market_calendars >=5.1.3
     - pyarrow >=22.0.0
-    - pytz >=2025.2
-    - ruamel.yaml >=0.18.16
 
 test:
   imports:
     - xbbg
-  # pip check disabled: upstream pyproject.toml lists python-stdnum>=2.1
-  # which is unavailable on conda-forge. Will be fixed in xbbg v0.11+
   requires:
     - python {{ python_min }}
 
