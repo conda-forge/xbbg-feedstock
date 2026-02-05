@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "0.10.3" %}
+{% set version = "0.11.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 900a0faf6aa0e4f470767798b7ef2ba6763bfb29a4d1d6c20b5d4dbb0e24c036
+  sha256: 81afbcf9252d8262ea9b3e9bcb5ba6e1571fd1e9c8cd3fd7b625628d8fcbb3d0
 
 build:
   noarch: python
