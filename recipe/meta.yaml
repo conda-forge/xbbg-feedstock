@@ -14,6 +14,8 @@ build:
   number: 0
   skip: true  # [osx and x86_64]
   script:
+    - export PIP_NO_INDEX=false                                                                                                # [unix]
+    - set PIP_NO_INDEX=false                                                                                                   # [win]
     - {{ PYTHON }} -m pip install {{ name }}=={{ version }} --no-deps --no-cache-dir --pre --index-url https://pypi.org/simple -vv
 
 requirements:
