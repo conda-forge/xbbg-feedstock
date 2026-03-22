@@ -11,7 +11,7 @@ source:
   sha256: 65e8978f723eb1e8d2b82a871e437e8b50ba40891d2882cbeb5157227f111ca2
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx and x86_64]
   script:
     - export PIP_NO_INDEX=false                                                                                                # [unix]
