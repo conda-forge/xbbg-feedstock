@@ -14,10 +14,12 @@ build:
   number: 0
   skip: true  # [osx and x86_64]
   script:
-    - export BLPAPI_INCLUDE_DIR=$PREFIX/include           # [unix]
-    - export BLPAPI_LIB_DIR=$PREFIX/lib                   # [unix]
-    - set BLPAPI_INCLUDE_DIR=%LIBRARY_PREFIX%\include     # [win]
-    - set BLPAPI_LIB_DIR=%LIBRARY_PREFIX%\lib             # [win]
+    - export BLPAPI_INCLUDE_DIR=$PREFIX/include             # [unix]
+    - export BLPAPI_LIB_DIR=$PREFIX/lib                     # [unix]
+    - export LIBCLANG_PATH=$BUILD_PREFIX/lib                # [unix]
+    - set BLPAPI_INCLUDE_DIR=%LIBRARY_PREFIX%\include       # [win]
+    - set BLPAPI_LIB_DIR=%LIBRARY_PREFIX%\lib               # [win]
+    - set LIBCLANG_PATH=%BUILD_PREFIX%\Library\bin          # [win]
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [unix]
     - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}     # [win]
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -31,6 +33,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cargo-bundle-licenses
+    - libclang
     - libclang-cpp
   host:
     - python {{ python_min }}.*
