@@ -41,7 +41,7 @@ requirements:
     - wheel >=0.46
     - libblpapi-devel
   run:
-    - python >={{ python_min }}
+    - python
     - narwhals >=1.30
     - pyarrow >=22.0.0
 
