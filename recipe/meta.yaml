@@ -18,6 +18,7 @@ build:
     - export BLPAPI_LIB_DIR=$PREFIX/lib                                                # [unix]
     - export LIBCLANG_PATH=$BUILD_PREFIX/lib                                           # [unix]
     - export BINDGEN_EXTRA_CLANG_ARGS="--sysroot=$CONDA_BUILD_SYSROOT"                 # [linux]
+    - export BINDGEN_EXTRA_CLANG_ARGS="-isysroot $CONDA_BUILD_SYSROOT"               # [osx]
     - set BLPAPI_INCLUDE_DIR=%LIBRARY_PREFIX%\include                                  # [win]
     - set BLPAPI_LIB_DIR=%LIBRARY_PREFIX%\lib                                          # [win]
     - set LIBCLANG_PATH=%BUILD_PREFIX%\Library\bin                                     # [win]
