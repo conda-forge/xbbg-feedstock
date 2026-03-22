@@ -14,7 +14,7 @@ build:
   number: 0
   skip: true  # [osx and x86_64]
   script:
-    - {{ PYTHON }} -m pip install {{ name }}=={{ version }} --no-deps --no-cache-dir --index-url https://pypi.org/simple -vv
+    - {{ PYTHON }} -m pip install {{ name }}=={{ version }} --no-deps --no-cache-dir --pre --index-url https://pypi.org/simple -vv
 
 requirements:
   host:
