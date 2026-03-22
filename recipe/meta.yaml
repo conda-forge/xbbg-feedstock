@@ -14,41 +14,17 @@ build:
   number: 0
   skip: true  # [osx and x86_64]
   script:
-    - export BLPAPI_INCLUDE_DIR=$PREFIX/include                                        # [unix]
-    - export BLPAPI_LIB_DIR=$PREFIX/lib                                                # [unix]
-    - export LIBCLANG_PATH=$BUILD_PREFIX/lib                                           # [unix]
-    - export BINDGEN_EXTRA_CLANG_ARGS="--sysroot=$CONDA_BUILD_SYSROOT"                 # [linux]
-    - export BINDGEN_EXTRA_CLANG_ARGS="-isysroot $CONDA_BUILD_SYSROOT"               # [osx]
-    - set BLPAPI_INCLUDE_DIR=%LIBRARY_PREFIX%\include                                  # [win]
-    - set BLPAPI_LIB_DIR=%LIBRARY_PREFIX%\lib                                          # [win]
-    - set LIBCLANG_PATH=%BUILD_PREFIX%\Library\bin                                     # [win]
-    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [unix]
-    - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}     # [win]
-    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - {{ PYTHON }} -m pip install {{ name }}=={{ version }} --no-deps --no-cache-dir --index-url https://pypi.org/simple -vv
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('rust') }}
-    - {{ stdlib('c') }}
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cargo-bundle-licenses
-    - libclang
-    - libclang-cpp
   host:
     - python {{ python_min }}.*
     - pip
-    - setuptools >=82
-    - setuptools-rust >=1.12
-    - setuptools-scm >=9
-    - wheel >=0.46
-    - libblpapi-devel
   run:
     - python
     - narwhals >=1.30
     - pyarrow >=22.0.0
+    - libblpapi
 
 test:
   imports:
@@ -60,9 +36,7 @@ about:
   home: https://github.com/alpha-xone/xbbg
   license: Apache-2.0
   license_family: Apache
-  license_file:
-    - LICENSE
-    - THIRDPARTY.yml
+  license_file: LICENSE
   summary: Intuitive Bloomberg data API
   doc_url: https://xbbg.readthedocs.io
   dev_url: https://github.com/alpha-xone/xbbg
