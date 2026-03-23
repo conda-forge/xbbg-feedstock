@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "1.0.0b7" %}
+{% set version = "1.0.0rc1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/alpha-xone/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 65e8978f723eb1e8d2b82a871e437e8b50ba40891d2882cbeb5157227f111ca2
+  sha256: 4e054ab0322b763468b8e14115f278f07a4f411fa0b81e40309fbcf7ea694516
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - python
     - narwhals >=1.30
     - pyarrow >=22.0.0
-    - libblpapi
+    - blpapi
 
 test:
   imports:
