@@ -1,6 +1,5 @@
 {% set name = "xbbg" %}
 {% set version = "1.0.0rc2" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -12,15 +11,16 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx and x86_64]
+  skip: true  # [py<310 or (osx and x86_64)]
   script:
     - export PIP_NO_INDEX=false                                                                                                # [unix]
     - set PIP_NO_INDEX=false                                                                                                   # [win]
+    # Build with the matrix interpreter so each CI variant emits its own pyXY package.
     - {{ PYTHON }} -m pip install {{ name }}=={{ version }} --no-deps --no-cache-dir --pre --index-url https://pypi.org/simple -vv
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python
     - pip
   run:
     - python
@@ -32,7 +32,7 @@ test:
   imports:
     - xbbg
   requires:
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://github.com/alpha-xone/xbbg
