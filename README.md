@@ -11,7 +11,7 @@ Summary: Intuitive Bloomberg data API
 
 Development: https://github.com/alpha-xone/xbbg
 
-Documentation: https://xbbg.readthedocs.io
+Documentation: https://alpha-xone.github.io/xbbg
 
 Current build status
 ====================
