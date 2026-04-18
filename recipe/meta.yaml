@@ -1,27 +1,27 @@
 {% set name = "xbbg" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set python_mm = python.split(" ")[0].replace(".*", "") %}
 {% set abi_tag = "cp" ~ python_mm.replace(".", "") %}
 {% set platform_tags = {"linux-64": "manylinux_2_34_x86_64", "osx-arm64": "macosx_11_0_universal2", "win-64": "win_amd64"} %}
 {% set wheel_filename = name ~ "-" ~ version ~ "-" ~ abi_tag ~ "-" ~ abi_tag ~ "-" ~ platform_tags[target_platform] ~ ".whl" %}
 {% set wheel_artifacts = {
   "linux-64": {
-    "3.10": {"url": "https://files.pythonhosted.org/packages/74/e1/267fffca73689ace0943c2abc064f5567078c5e22b2a967adaa215ae684e/xbbg-1.0.0-cp310-cp310-manylinux_2_34_x86_64.whl", "sha256": "d98dfc8beb401fc184dcf966a330182f86ab850301c280dbd5fc300848f7bb91"},
-    "3.11": {"url": "https://files.pythonhosted.org/packages/b5/23/faf1950e9ef4e2dc419261212b6c9fb8126ef777f1f9dceacfbb8ed10d02/xbbg-1.0.0-cp311-cp311-manylinux_2_34_x86_64.whl", "sha256": "1fd5aa755fbbfeb2ea599f2b3adbe050223b60a5a3cb7081db47be496c2a85fd"},
-    "3.12": {"url": "https://files.pythonhosted.org/packages/ce/fd/285a49c5c3a6d2ec48288cfd1b968b6e3185c5d912080a27c2210d9c8399/xbbg-1.0.0-cp312-cp312-manylinux_2_34_x86_64.whl", "sha256": "87faff80a3d93e25a1dc6cb73d695bb1866d72eb8037040d55aeb5a466ba4b05"},
-    "3.13": {"url": "https://files.pythonhosted.org/packages/79/1f/8c8fd0b62b3e4eb61519301355620c6e26eaeb23fb734707fd79b57e7713/xbbg-1.0.0-cp313-cp313-manylinux_2_34_x86_64.whl", "sha256": "7f519a71cc5d70f56e420c4624260543c00143ef04a2a1da620c18afe91b741e"},
+    "3.10": {"url": "https://files.pythonhosted.org/packages/2b/bc/bca53c656bb6c90caeff67a7325146d9ced028f5f304e75b4a95a6992f88/xbbg-1.1.0-cp310-cp310-manylinux_2_34_x86_64.whl", "sha256": "67be551c438f83ea7165e690895004a192848d089c6849a1520c8a9eae3ee156"},
+    "3.11": {"url": "https://files.pythonhosted.org/packages/27/8a/5654fe907059bc654590bde1099dd2ab242d4e7921792e38d2f18156bdb9/xbbg-1.1.0-cp311-cp311-manylinux_2_34_x86_64.whl", "sha256": "7ecb466b1b4033bf7ebc3543838d8aeebad4c733c4913d61a88e83657748f095"},
+    "3.12": {"url": "https://files.pythonhosted.org/packages/4a/1f/89d4fc2ed8bce16c02e98065f96bd8936f65d0c42f28aead32d34d16aec5/xbbg-1.1.0-cp312-cp312-manylinux_2_34_x86_64.whl", "sha256": "2d91f8868beb47a98c3bf51fdb432acc36ddadc691cfd96b9df78bd922ebf859"},
+    "3.13": {"url": "https://files.pythonhosted.org/packages/f2/62/9ee0e770e5789316f5f7acedd2f29b010862df5471d7acae12ec9ca0052b/xbbg-1.1.0-cp313-cp313-manylinux_2_34_x86_64.whl", "sha256": "102efe2c3156fa4ed11411ffcd2cbc84477fbdb710299682d3eec0e2e368e448"},
   },
   "osx-arm64": {
-    "3.10": {"url": "https://files.pythonhosted.org/packages/ef/5b/bc8b90a1ffc05a6c8ef50222a00df7d506a01863017ff88c91b0cebba5fb/xbbg-1.0.0-cp310-cp310-macosx_11_0_universal2.whl", "sha256": "f29d0d96afa2cfc7961ed5c55baf6eac5c249aa61ae6cb559c3baf9ff7b06b75"},
-    "3.11": {"url": "https://files.pythonhosted.org/packages/fc/c0/9204982acb9752067b9b23f9bb001f654cf39842d537dc41481b0c317193/xbbg-1.0.0-cp311-cp311-macosx_11_0_universal2.whl", "sha256": "97eaa4eb52fe12cc9bab0868b583102b4c93264a99901b87fa8904cc5b8643ef"},
-    "3.12": {"url": "https://files.pythonhosted.org/packages/c5/d6/7a4cc46a3f0fa2de812c2de186a2170b372988706e3354afa296ddb1c576/xbbg-1.0.0-cp312-cp312-macosx_11_0_universal2.whl", "sha256": "a1765a96037da0fd5c822cdd1c0e16c791dd15713d1e72b6771f3915e82b2d5f"},
-    "3.13": {"url": "https://files.pythonhosted.org/packages/17/d3/0583d496c783947844443abffaad018afcb04b983992c7e177cf114eb84c/xbbg-1.0.0-cp313-cp313-macosx_11_0_universal2.whl", "sha256": "b90ceb7ffca1a14ca7d32ff583763fe9cbfd26d8d291a6a58991204d214119c8"},
+    "3.10": {"url": "https://files.pythonhosted.org/packages/d0/4c/1548cfde0359b864877d23e88f6a2b0afdf171eb1838e2ccf7d86d46e3b1/xbbg-1.1.0-cp310-cp310-macosx_11_0_universal2.whl", "sha256": "29d739342e9df06f499c0fd676501b07a5202d54cb8c8eaa0f0f1c9d1421f8b3"},
+    "3.11": {"url": "https://files.pythonhosted.org/packages/d2/ea/9a8f5a97359d26fc75742a3fce958d8ce9e05d278944b3acc8d7a705e6ff/xbbg-1.1.0-cp311-cp311-macosx_11_0_universal2.whl", "sha256": "6baaa4f3bf86c360b0952b5154c7db113ba1398b25477f20061b56bb706637a4"},
+    "3.12": {"url": "https://files.pythonhosted.org/packages/63/08/8d4d9d736627dd3ff9b14a1b989f908b0bb8057325af7501e177982527ec/xbbg-1.1.0-cp312-cp312-macosx_11_0_universal2.whl", "sha256": "9416a58164e6a97117c0b18d3856eec0a65f3284458cd825f2c17980c9679545"},
+    "3.13": {"url": "https://files.pythonhosted.org/packages/1e/33/134ba654acf41efdcaeb3486e4432e33d6e8602e04427c4e22bb462fb3ef/xbbg-1.1.0-cp313-cp313-macosx_11_0_universal2.whl", "sha256": "88e28d2922e068725223939a3f8ecaa7a25bd265e9c204eb83d03c91e2281eb3"},
   },
   "win-64": {
-    "3.10": {"url": "https://files.pythonhosted.org/packages/d8/d3/1efdcc6aeddff7d1b371a9186af040985c7e22ba92217eb5f259d83c8eae/xbbg-1.0.0-cp310-cp310-win_amd64.whl", "sha256": "8cd1409c472f35c5d38295a2aca9a5366aaef497ff0bb36982df413d06539970"},
-    "3.11": {"url": "https://files.pythonhosted.org/packages/16/64/5bebe1449325f05d6367f3d299fa85675770728bc7ddb56614ed7a6ba228/xbbg-1.0.0-cp311-cp311-win_amd64.whl", "sha256": "f9ccbb8c2640b305d346a39a860fc66a94f01f2bcc897bed7755abe8fb21a49d"},
-    "3.12": {"url": "https://files.pythonhosted.org/packages/cc/24/47c22f90679de09dc00f12f1a49e63e470c3d46ea0f3c3a354b126c315eb/xbbg-1.0.0-cp312-cp312-win_amd64.whl", "sha256": "0aa0e24c8fccaf5904b39f1a9d96c49ddb732832e2117a95aa799e980af6a2d8"},
-    "3.13": {"url": "https://files.pythonhosted.org/packages/19/97/a565f262ff9f2c29bee2ce5b3d8b6b82034b3bc5a62bba1f66594f1b4b43/xbbg-1.0.0-cp313-cp313-win_amd64.whl", "sha256": "97937665ca6137b9d9018b0fa813831a70e4da5bd37516368d2560dfdf416def"},
+    "3.10": {"url": "https://files.pythonhosted.org/packages/56/f9/d5e6ce4574b43f1846ef2b6b7de96eb4a33343016a29962766f1d620920d/xbbg-1.1.0-cp310-cp310-win_amd64.whl", "sha256": "2f87a4b9e922ac1384e8e77cd4387cdce4d507e8786243af2f902a277011b460"},
+    "3.11": {"url": "https://files.pythonhosted.org/packages/3a/90/e1d7b0d1dcb34b2f0bb5280c3e8d7e795442a2fbb7ba3a35a0bab29d6023/xbbg-1.1.0-cp311-cp311-win_amd64.whl", "sha256": "ed3763df768eaa30395eef71c0a5c498a7c502b40dc2170bd2100a60fff4b155"},
+    "3.12": {"url": "https://files.pythonhosted.org/packages/0a/39/d9d69a6d7c20ccc9c1cbfd372a99965d061662e5168ca76147bba1ca400e/xbbg-1.1.0-cp312-cp312-win_amd64.whl", "sha256": "9080e0f892680eaf9de054b001436733c238031b81373908662ee4b91a133441"},
+    "3.13": {"url": "https://files.pythonhosted.org/packages/bc/90/443db9263bb454af5033718332e61010d131eb837afb90d802aecaedec6d/xbbg-1.1.0-cp313-cp313-win_amd64.whl", "sha256": "4d99b10f1c1d2fa3a76e5b975bcf57c6d0114c72ae26a98698290fdf3bb658bc"},
   },
 } %}
 {% set wheel = wheel_artifacts[target_platform][python_mm] %}
@@ -32,8 +32,8 @@ package:
 
 source:
   # Keep the sdist for metadata/license capture, and package the matching upstream wheel locally.
-  - url: https://files.pythonhosted.org/packages/58/3a/cf52c61a2f9701375b867719c039fdd28f6b4bf38ec30ea1fd2c0f30583d/xbbg-1.0.0.tar.gz
-    sha256: 3482342d0260e8e7c7d92e0ef89c0cb2d562cf5a09673ebf000da33c06425856
+  - url: https://files.pythonhosted.org/packages/ce/31/273744fbbe482a1031e379afaf0db23158d88d3eea1adc3224e146cda59d/xbbg-1.1.0.tar.gz
+    sha256: 1238a266447ca7def3923d087246a3c55f23952b88f10c98189ace54124ac45d
     folder: sdist
   - url: {{ wheel["url"] }}
     sha256: {{ wheel["sha256"] }}
