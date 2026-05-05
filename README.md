@@ -3,15 +3,15 @@ About xbbg-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xbbg-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/alpha-xone/xbbg
+Home: https://xbbg.org/
 
 Package license: Apache-2.0
 
-Summary: Intuitive Bloomberg data API
+Summary: Independent client for Bloomberg-connected data workflows
 
 Development: https://github.com/alpha-xone/xbbg
 
-Documentation: https://alpha-xone.github.io/xbbg
+Documentation: https://xbbg.org/
 
 Current build status
 ====================
