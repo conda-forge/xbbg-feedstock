@@ -44,7 +44,7 @@ source:
     fn: {{ wheel_filename }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310 or py>=315 or (osx and x86_64)]
   script:
     - export PIP_NO_INDEX=false                                                                                                # [unix]
