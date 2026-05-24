@@ -44,7 +44,7 @@ source:
     fn: {{ wheel_filename }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310 or py>=315 or (osx and x86_64)]
   script:
     - export PIP_NO_INDEX=false                                                                                                # [unix]
@@ -73,6 +73,13 @@ about:
   license_family: Apache
   license_file: sdist/LICENSE
   summary: Independent client for Bloomberg-connected data workflows
+  description: |
+    xbbg is an independent Bloomberg client for authorized Bloomberg environments.
+    It provides Python APIs backed by a Rust engine for request/response workflows,
+    subscriptions, async execution, typed errors, diagnostics, and Narwhals-native
+    data outputs. Current v1 conda-forge builds are platform-specific packages for
+    linux-64, osx-arm64, and win-64 on Python 3.10 through 3.14; older noarch
+    entries on anaconda.org are historical v0.x builds.
   doc_url: https://xbbg.org/
   dev_url: https://github.com/alpha-xone/xbbg
 
