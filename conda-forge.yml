@@ -2,7 +2,7 @@ conda_forge_output_validation: true
 bot:
   version_updates:
     sources:
-      - github
+      - pypi
 github:
   branch_name: main
   tooling_branch_name: main
