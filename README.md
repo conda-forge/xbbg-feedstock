@@ -7,17 +7,34 @@ Home: https://xbbg.org/
 
 Package license: Apache-2.0
 
-Summary: Independent client for Bloomberg-connected data workflows
+Summary: Independent Bloomberg BLPAPI client for Python data workflows
 
-Development: https://github.com/alpha-xone/xbbg
+Development: https://github.com/xbbg-org/xbbg
 
 Documentation: https://xbbg.org/
+
+xbbg is an independent Bloomberg BLPAPI client for authorized Bloomberg
+environments. It provides Python APIs backed by a Rust engine for BDP, BDS,
+BDH, BQL, BEQS, BSRCH, intraday bars, ticks, subscriptions, async execution,
+typed errors, diagnostics, and Arrow/Narwhals-native data outputs. Supported
+connection modes include Bloomberg Desktop API/DAPI, SAPI/B-PIPE, and ZFP.
+Current v1 conda-forge builds are platform-specific packages for linux-64,
+osx-arm64, and win-64 on Python 3.10 through 3.14; older noarch entries on
+anaconda.org are historical v0.x builds.
+
 
 Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/xbbg-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/xbbg-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -141,6 +158,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@kj55-dev](https://github.com/kj55-dev/)
+* [@m3ridian-zero](https://github.com/m3ridian-zero/)
 * [@makoponi](https://github.com/makoponi/)
 
