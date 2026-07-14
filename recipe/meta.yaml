@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "1.4.1" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/xbbg-org/xbbg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 51947bde00cf7ab2fe7170cd89f3323f014c30cb220e8496cfcb1acb4eb0be6b
+  sha256: 6d4de1cdbec7b0565763f7442eb290c5aa9e0812fac707a11799940719d1077f
 
 build:
   number: 0
