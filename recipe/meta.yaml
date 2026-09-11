@@ -10,7 +10,7 @@ source:
   sha256: 7a019752303d94c33ee94536696c61a20cf8b4f521294599990dac2d6cf9a03b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310 or py>=315 or (osx and x86_64)]
   script:
     - export BLPAPI_INCLUDE_DIR="${PREFIX}/include"  # [unix]
