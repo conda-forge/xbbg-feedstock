@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "1.4.6" %}
+{% set version = "1.4.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/xbbg-org/xbbg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 48ecc706921732896d8583038dda5b05198216a5f1d4c7fb830eaf661439c21c
+  sha256: 7a019752303d94c33ee94536696c61a20cf8b4f521294599990dac2d6cf9a03b
 
 build:
   number: 0
@@ -42,7 +42,7 @@ requirements:
     - libblpapi-devel
   run:
     - python
-    - narwhals >=2.0
+    - narwhals >=2.10.0
     - blpapi
     - libblpapi
 
