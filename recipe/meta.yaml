@@ -30,7 +30,12 @@ requirements:
     - {{ compiler('rust') }}
     - {{ stdlib('c') }}
     - cargo-bundle-licenses
-    - clangdev  # [unix]
+    - clangdev  # [linux]
+    # rust >=1.98 on macOS ships its own lib/libLLVM.dylib; clangdev's llvmdev
+    # overwrites it with a symlink to LLVM 19 and rustc crashes at startup.
+    # libclang only needs the versioned libLLVM; clang's builtin headers come
+    # from the C compiler, so keep both on the same major.
+    - libclang {{ c_compiler_version }}  # [osx]
     - libclang  # [win]
   host:
     - python
