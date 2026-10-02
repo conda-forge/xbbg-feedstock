@@ -1,13 +1,13 @@
 {% set name = "xbbg" %}
-{% set version = "1.4.12" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/xbbg-org/xbbg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7a019752303d94c33ee94536696c61a20cf8b4f521294599990dac2d6cf9a03b
+  url: https://github.com/underloam/xbbg/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 26de62b58b460ad480d3a04d2307a2e3fb4b081bde490ff942434cf274b7e2d1
 
 build:
   number: 0
@@ -70,7 +70,7 @@ about:
     osx-arm64, and win-64 on Python 3.10 through 3.14; older noarch entries on
     anaconda.org are historical v0.x builds.
   doc_url: https://xbbg.org/
-  dev_url: https://github.com/xbbg-org/xbbg
+  dev_url: https://github.com/underloam/xbbg
 
 extra:
   recipe-maintainers:
