@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/underloam/xbbg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 26de62b58b460ad480d3a04d2307a2e3fb4b081bde490ff942434cf274b7e2d1
+  sha256: a5a82ef184557baaec0378f7a2eea1246d41acc839a0ee58f0f7f75d9ae52ce8
 
 build:
   number: 0
@@ -54,6 +54,9 @@ requirements:
 test:
   imports:
     - xbbg
+    # `import xbbg` loads the Rust extension lazily, so import it directly. This
+    # fails if the binary cannot load or was built for a different xbbg version.
+    - xbbg._core
   requires:
     - python
 
