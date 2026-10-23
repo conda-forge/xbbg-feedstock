@@ -12,3 +12,11 @@ provider:
   linux_64: github_actions
   osx_arm64: github_actions
   win_64: github_actions
+# Temporary: on win-64, libmambapy 2.10.0 rejects the `signatures` argument that
+# conda-libmamba-solver 26.10.0 passes, so every Windows build fails before the
+# recipe runs (conda-forge/conda-libmamba-solver-feedstock#63). The first two
+# entries are conda-smithy's defaults; drop this key once that issue is fixed.
+remote_ci_setup:
+  - conda-forge-ci-setup=4
+  - conda-build>=26.3
+  - libmambapy<2.10
