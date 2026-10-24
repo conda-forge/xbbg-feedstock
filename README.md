@@ -19,7 +19,7 @@ BDH, BQL, BEQS, BSRCH, intraday bars, ticks, subscriptions, async execution,
 typed errors, diagnostics, and Arrow/Narwhals-native data outputs. Supported
 connection modes include Bloomberg Desktop API/DAPI, SAPI/B-PIPE, and ZFP.
 Current v1 conda-forge builds are platform-specific packages for linux-64,
-osx-arm64, and win-64 on Python 3.11 through 3.14; older noarch entries on
+osx-arm64, and win-64 on Python 3.11 through 3.15; older noarch entries on
 anaconda.org are historical v0.x builds.
 
 
