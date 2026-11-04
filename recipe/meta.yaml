@@ -1,5 +1,5 @@
 {% set name = "xbbg" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/underloam/xbbg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 9e90166acc21c638620b524ae2831f98637cac022c11e08a37c69ecc68f81934
+  sha256: 604ca5893fd55e31ef172a44d5fd76545cd5c5c9c50eaac33f271eee81fa58b5
 
 build:
   number: 0
