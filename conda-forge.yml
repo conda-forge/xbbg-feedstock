@@ -16,7 +16,11 @@ provider:
 # conda-libmamba-solver 26.10.0 passes, so every Windows build fails before the
 # recipe runs (conda-forge/conda-libmamba-solver-feedstock#63). The first two
 # entries are conda-smithy's defaults; drop this key once that issue is fixed.
+# Temporary: anaconda-client 1.16.0 rejects `--channel` with `--user`, so
+# linux-64 uploads fail (conda-forge/conda-forge-ci-setup-feedstock#454). It is
+# marked broken upstream, but the CDN still serves it; drop the pin once it stops.
 remote_ci_setup:
   - conda-forge-ci-setup=4
   - conda-build>=26.3
   - libmambapy<2.10
+  - anaconda-client<1.16
